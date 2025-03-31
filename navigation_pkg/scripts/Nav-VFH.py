@@ -39,14 +39,14 @@ class NavigationNode:
         self.WidevalleyMin = 22
 
         # New parameters for VFH*
-        self.ds = self.robotDim  # projected step distance (default: robot's diameter)
+        self.ds = self.robotDim  # projected step distance 
         self.ng = 2              # goal depth (number of projection steps)
 
         # Safety bubble parameters:
         self.safety_bubble_width = 180  
         self.safety_distance =  0.45  
 
-        # Set initial position and goal.
+        
         self.current_position = (self.INIT_POSITION[0], self.INIT_POSITION[1])
         self.current_heading = 0.0
 
@@ -55,7 +55,7 @@ class NavigationNode:
             self.INIT_POSITION[1] + self.GOAL_POSITION[1]
         )
 
-        # Initialize fuzzy controllers.
+        
         self.init_fuzzy_controllers()
 
         # Initialize previous heading for temporal smoothing (memory term).
@@ -103,7 +103,7 @@ class NavigationNode:
         linear_ctrl = ctrl.ControlSystem([rule1, rule2, rule3, rule4, rule5])
         self.linear_sim = ctrl.ControlSystemSimulation(linear_ctrl)
         
-        # --- Angular Velocity Fuzzy Controller ---
+        #  Angular Velocity Fuzzy Controller ---
         angular_input = ctrl.Antecedent(np.arange(0, 90.01, 0.1), 'Angular_Input')
         angular_input['very_left']  = fuzz.trapmf(angular_input.universe, [-20.25, -2.25, 0, 22.5])
         angular_input['left']       = fuzz.trimf(angular_input.universe, [0, 22.5, 45])
@@ -182,18 +182,18 @@ class NavigationNode:
         prev_h = self.prev_heading if self.prev_heading is not None else heading_sector
         candidate = vfh_star_full(current_position, current_heading, heading_sector,
                                   self.ds, self.ng, hb, self.threshold, self.robotDim, self.WidevalleyMin, prev_h)
-        rospy.loginfo("VFH* candidate heading: %d", candidate)
+        #rospy.loginfo("VFH* candidate heading: %d", candidate)
         return candidate
     
     def run(self):
         rate = rospy.Rate(10)
         while not rospy.is_shutdown():
-            # Ensure sensor data is available.
+            
             if self.processed_lidar_ranges is None or self.odom_data is None:
                 rate.sleep()
                 continue
 
-            # --- Goal Reached Check ---
+            # - Goal Reached Check 
             distance_to_goal = math.hypot(
                 self.target_absolute_position[0] - self.current_position[0],
                 self.target_absolute_position[1] - self.current_position[1]
@@ -206,7 +206,7 @@ class NavigationNode:
                 self.cmd_vel_pub.publish(twist)
                 break
 
-            # Process obstacle data.
+            # VFH functions
             m = calcDanger(self.processed_lidar_ranges, self.max_range)
             h = calc_h(m, self.sector_size)
             hp = calc_hp(h, self.filter_width)
@@ -249,7 +249,7 @@ class NavigationNode:
             front_readings = self.processed_lidar_ranges[front_indices]
             if (np.all(front_readings >= self.max_range) and 
                 abs(smoothed_heading - heading_sector) < 5):
-                rospy.loginfo("Clear path detected and aligned with goal. Overriding speed to 2 m/s.")
+                #rospy.loginfo("Clear path detected and aligned with goal. Overriding speed to 2 m/s.")
                 twist.linear.x = 2.0
             
             # --- Safety Bubble Check ---
@@ -258,7 +258,7 @@ class NavigationNode:
             end_idx = min(num_beams, center_index + half_width + 1)
             safety_readings = self.processed_lidar_ranges[start_idx:end_idx]
             if np.any(safety_readings < self.safety_distance):
-                rospy.logwarn("Safety bubble triggered! Obstacle detected in front area.")
+                #rospy.logwarn("Safety bubble triggered! Obstacle detected in front area.")
                 twist.linear.x = 0.0
                 mid = len(safety_readings) // 2
                 left_clearance = np.min(safety_readings[:mid]) if mid > 0 else self.max_range

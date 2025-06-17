@@ -1,9 +1,14 @@
+
+# RRSL team at ICRA BARN Navigation Challenge
+
+https://github.com/user-attachments/assets/02c42285-0fcb-411e-b99d-79f58bc4fba0
+
+
+--------------------------------------------------------------------------------
 <p align="center">
   <img width = "100%" src='res/BARN_Challenge.png' />
   </p>
-
---------------------------------------------------------------------------------
-
+  
 # ICRA BARN Navigation Challenge
 
 ## Updates:
@@ -124,3 +129,9 @@ Except for `DWA`, we also provide three learning-based navigation stack as examp
 
 ## Submission
 Submit a link that downloads your customized repository to this [Google form](https://docs.google.com/forms/d/e/1FAIpQLSfZLMVluXE-HWnV9lNP00LuBi3e9HFOeLi30p9tsHUViWpqrA/viewform). Your navigation stack will be tested in the Singularity container on 50 hold-out BARN worlds sampled from the same distribution as the 300 BARN worlds. In the repository, make sure the `run.py` runs your navigation stack and `Singularityfile.def` installs all the dependencies of your repo. We suggest to actually build an image and test it with `./singularity_run.sh /path/to/image/file python3 run.py --world_idx 0`. You can also refer to branch `LfH`, `applr` and `e2e`, which are in the correct form for submissions.
+
+
+
+
+
+

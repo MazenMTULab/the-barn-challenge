@@ -12,13 +12,16 @@ https://github.com/user-attachments/assets/02c42285-0fcb-411e-b99d-79f58bc4fba0
 
 
 --------------------------------------------------------------------------------
+
+# ICRA BARN Navigation Challenge
+
 <p align="center">
   <img width = "100%" src='res/BARN_Challenge.png' />
   </p>
   <!-- <img width = "100%" src='res/BARN_Challenge.png' /> This photo is commented-->
 
   
-# ICRA BARN Navigation Challenge
+
 
 ## Updates:
 * 02/04/2024: Adding 60 [DynaBARN](https://github.com/aninair1905/DynaBARN) environments. DynaBARN environments can be accessed by world indexes from 300-359.

@@ -3,11 +3,20 @@
 
 https://github.com/user-attachments/assets/02c42285-0fcb-411e-b99d-79f58bc4fba0
 
+# RRSL real-world performance in different challenging environment
+
+![2025_06_24_0iv_Kleki](https://github.com/user-attachments/assets/8e2be449-1990-49ea-8b85-6d5573a277a6)
+
+
+![2025_06_24_0jv_Kleki](https://github.com/user-attachments/assets/16044bb0-b88d-44e8-a619-adcb1903e2e9)
+
 
 --------------------------------------------------------------------------------
 <p align="center">
   <img width = "100%" src='res/BARN_Challenge.png' />
   </p>
+  <!-- <img width = "100%" src='res/BARN_Challenge.png' /> This photo is commented-->
+
   
 # ICRA BARN Navigation Challenge
 

@@ -5,6 +5,8 @@ https://github.com/user-attachments/assets/02c42285-0fcb-411e-b99d-79f58bc4fba0
 
 # RRSL real-world performance in different challenging environment
 
+![trap-path](https://github.com/user-attachments/assets/4d02cff9-b1a3-43c0-b7f9-e6a4648f769b)
+
 ![2025_06_24_0iv_Kleki](https://github.com/user-attachments/assets/8e2be449-1990-49ea-8b85-6d5573a277a6)
 
 

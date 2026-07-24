@@ -1,9 +1,17 @@
 
 # RRSL team at ICRA BARN Navigation Challenge
 
+<!--
+## Hidden Section
+
+This content will not appear in the rendered README.
+
+
 %https://github.com/user-attachments/assets/02c42285-0fcb-411e-b99d-79f58bc4fba0
 
 %https://drive.google.com/file/d/1rMrpBp_BUho9niubLaWGyvXhtv7Mr5jT/view?usp=sharing
+
+-->
 ## Demo Video
 
 [![Watch the demo video]](https://drive.google.com/file/d/1rMrpBp_BUho9niubLaWGyvXhtv7Mr5jT/view?usp=sharing)

@@ -14,7 +14,7 @@ This content will not appear in the rendered README.
 -->
 ## Demo Video
 
-[![Watch the demo video]](https://drive.google.com/file/d/1rMrpBp_BUho9niubLaWGyvXhtv7Mr5jT/view?usp=sharing)
+[[Watch the demo video]](https://drive.google.com/file/d/1rMrpBp_BUho9niubLaWGyvXhtv7Mr5jT/view?usp=sharing)
 
 
 

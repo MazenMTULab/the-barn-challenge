@@ -1,9 +1,15 @@
 
 # RRSL team at ICRA BARN Navigation Challenge
 
-https://github.com/user-attachments/assets/02c42285-0fcb-411e-b99d-79f58bc4fba0
+% https://github.com/user-attachments/assets/02c42285-0fcb-411e-b99d-79f58bc4fba0
 
-https://drive.google.com/file/d/1rMrpBp_BUho9niubLaWGyvXhtv7Mr5jT/view?usp=sharing
+% https://drive.google.com/file/d/1rMrpBp_BUho9niubLaWGyvXhtv7Mr5jT/view?usp=sharing
+## Demo Video
+
+[![Watch the demo video](assets/demo-thumbnail.png)](https://drive.google.com/file/d/1rMrpBp_BUho9niubLaWGyvXhtv7Mr5jT/view?usp=sharing)
+
+
+
 
 # RRSL real-world performance in different challenging environments
 
